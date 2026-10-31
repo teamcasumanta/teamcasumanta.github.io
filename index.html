@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TeamCASumanta | Project finance for MSMEs and start-ups</title>
+<meta name="description" content="Project reports, financial projections and loan proposals for MSMEs and start-ups, prepared by a Chartered Accountant.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f1f7fe;--surf:#fff;--tint:#dcebfb;--ink:#17283a;--mut:#51667b;--line:#d3e3f4;--or:#1a66c2;--or2:#6db3f2;--on:#fff;--sh:0 8px 28px rgba(26,102,194,.10);--head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"Figtree","Segoe UI",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1722;--surf:#162130;--tint:#1c2c40;--ink:#eaf2fb;--mut:#a7b8cb;--line:#293b52;--or:#7db8f5;--or2:#7db8f5;--on:#0a1522;--sh:none}}
+:root[data-theme="dark"]{--bg:#0e1722;--surf:#162130;--tint:#1c2c40;--ink:#eaf2fb;--mut:#a7b8cb;--line:#293b52;--or:#7db8f5;--or2:#7db8f5;--on:#0a1522;--sh:none}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:var(--head);line-height:1.12;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--or2);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:9}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{font:800 21px var(--head);text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand i{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--or);color:var(--on);font:800 15px var(--head);font-style:normal}
+nav{display:none;gap:26px;font-weight:500}
+nav a{text-decoration:none;color:var(--mut)}
+nav a:hover{color:var(--or)}
+.btn{display:inline-block;background:var(--or);color:var(--on);font:600 16px var(--body);padding:12px 22px;border-radius:12px;text-decoration:none;border:2px solid var(--or);cursor:pointer}
+.btn.alt{background:transparent;color:var(--or)}
+.btn.sm{padding:9px 16px;font-size:15px}
+.hero{padding:56px 0 64px;display:grid;gap:40px;grid-template-columns:1fr}
+.hero h1{font-size:clamp(34px,6vw,58px);font-weight:800}
+.hero p.lead{font-size:19px;color:var(--mut);max-width:33em;margin:20px 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--sh)}
+.calc h2{font-size:22px;margin-bottom:4px}
+.calc small,.note{color:var(--mut);font-size:14px}
+.row{margin-top:18px}
+.row label{display:flex;justify-content:space-between;font-weight:600;font-size:15px}
+.row output{color:var(--or)}
+input[type=range]{width:100%;accent-color:var(--or);margin:8px 0 0}
+.emi{margin-top:24px;padding-top:20px;border-top:1px dashed var(--line)}
+.emi b{display:block;font:800 clamp(34px,5vw,44px) var(--head);color:var(--or)}
+.bar{height:10px;border-radius:99px;background:var(--or2);overflow:hidden;margin:14px 0 8px}
+.bar span{display:block;height:100%;background:var(--ink);width:70%;transition:width .25s}
+.split{display:flex;justify-content:space-between;font-size:14px;color:var(--mut)}
+.band{background:var(--surf);border-block:1px solid var(--line)}
+.strip{display:grid;gap:18px;grid-template-columns:1fr 1fr;padding:26px 20px}
+.strip div{display:flex;gap:12px;align-items:center;font-weight:600;font-size:15px;line-height:1.3}
+.ic{width:24px;height:24px;flex:none}
+.badge{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--tint);color:var(--or);flex:none}
+section{padding:68px 0}
+section h2.t{font-size:clamp(28px,4vw,40px);font-weight:800;max-width:19em}
+p.sub{color:var(--mut);max-width:38em;margin:14px 0 0}
+.grid{display:grid;gap:18px;grid-template-columns:1fr;margin-top:36px}
+.svc h3{font-size:20px;margin:16px 0 6px}
+.svc p{margin:0;color:var(--mut);font-size:16px}
+.steps{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:18px;grid-template-columns:1fr;counter-reset:s}
+.steps li{counter-increment:s;background:var(--bg);border-radius:16px;padding:22px;border:1px solid var(--line)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--or);color:var(--on);font:700 17px var(--head);margin-bottom:12px}
+.steps h3{font-size:19px;margin-bottom:6px}
+.steps p{margin:0;color:var(--mut);font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0;padding:0;list-style:none}
+.chips li{background:var(--surf);border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-weight:500}
+details{border-bottom:1px solid var(--line);padding:18px 0;max-width:46em}
+summary{cursor:pointer;font:700 19px var(--head);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--or);font-size:24px;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{margin:12px 0 0;color:var(--mut)}
+.cb{background:var(--tint)}
+.cbg{display:grid;gap:36px;grid-template-columns:1fr;align-items:start}
+.ticks{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.ticks .ic{color:var(--or);margin-top:3px}
+.fg{display:grid;gap:14px;grid-template-columns:1fr}
+.fg label{display:block;font-weight:600;font-size:15px;margin-bottom:5px}
+input[type=text],input[type=tel],select,textarea{width:100%;font:400 16px var(--body);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:11px 13px}
+textarea{min-height:84px;resize:vertical}
+.fg .full{grid-column:1/-1}
+#msg{margin:14px 0 0;font-size:15px;min-height:1.4em}
+#msg.err{color:#c92a2a}
+.direct{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+footer{background:var(--surf);border-top:1px solid var(--line);padding:30px 0 40px;font-size:14px;color:var(--mut)}
+footer p{margin:10px 0 0;max-width:62em}
+@media(min-width:760px){
+nav{display:flex}
+.hero{grid-template-columns:1.1fr .9fr;align-items:center;padding:84px 0}
+.strip{grid-template-columns:repeat(4,1fr)}
+.grid{grid-template-columns:repeat(3,1fr)}
+.steps{grid-template-columns:repeat(4,1fr)}
+.cbg{grid-template-columns:.9fr 1.1fr}
+.fg{grid-template-columns:1fr 1fr}}
+.about{display:grid;gap:32px;grid-template-columns:1fr;align-items:center}.about p{margin:16px 0 0;color:var(--mut);font-size:18px}.facts{display:grid;gap:14px}.facts .card{padding:18px 22px}.facts b{display:block;font:800 30px var(--head);color:var(--or)}.facts span{color:var(--mut);font-size:15px}address{font-style:normal;margin-top:22px;color:var(--mut);font-size:15px;line-height:1.7}address a{color:var(--ink);font-weight:600}
+@media(min-width:760px){.about{grid-template-columns:1.3fr .7fr;gap:56px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar span{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+<symbol id="chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+<symbol id="case" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+<symbol id="bank" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M9 21V10M15 21V10M19 21V10M2 10l10-6 10 6z"/></symbol>
+<symbol id="redo" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-4L4 9M4 4v5h5M4 13a8 8 0 0 0 14 4l2-2M20 20v-5h-5"/></symbol>
+<symbol id="people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M17 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+<symbol id="shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+</defs>
+</svg>
+
+<header><div class="wrap">
+<a class="brand" href="#top"><i>CA</i>TeamCASumanta</a>
+<nav aria-label="Main"><a href="#about">About</a><a href="#services">Services</a><a href="#process">Process</a><a href="#faq">FAQ</a><a href="#callback">Contact</a></nav>
+<a class="btn sm" href="#callback">Request call back</a>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+<div>
+<h1>Bank-ready project finance for MSMEs and start-ups</h1>
+<p class="lead">A Chartered Accountant-led team that prepares your project report, financial projections and loan proposal, and supports you through the lender’s questions.</p>
+<div class="cta"><a class="btn" href="#callback">Request a call back</a><a class="btn alt" href="#services">See our services</a></div>
+</div>
+<form class="card calc" onsubmit="return false" aria-label="Loan EMI estimator">
+<h2>Estimate your monthly instalment</h2>
+<small>Indicative only. The lender sets the final terms.</small>
+<div class="row"><label for="amt">Loan amount <output id="oa"></output></label><input id="amt" type="range" min="100000" max="50000000" step="100000" value="2500000"></div>
+<div class="row"><label for="rt">Interest rate per year <output id="orr"></output></label><input id="rt" type="range" min="7" max="18" step="0.25" value="10.5"></div>
+<div class="row"><label for="yr">Repayment period <output id="oy"></output></label><input id="yr" type="range" min="1" max="15" step="1" value="5"></div>
+<div class="emi" aria-live="polite">
+<span>Monthly EMI</span><b id="emi"></b>
+<div class="bar" title="Share of principal in total payment"><span id="pb"></span></div>
+<div class="split"><span id="tp"></span><span id="ti"></span></div>
+</div>
+</form>
+</div>
+
+<div class="band"><div class="wrap strip">
+<div><span class="badge"><svg class="ic" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#doc"/></svg></span>Lender-ready documents</div>
+<div><span class="badge"><svg class="ic" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#bank"/></svg></span>Bank and scheme guidance</div>
+<div><span class="badge"><svg class="ic" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#shield"/></svg></span>Accurate, compliant numbers</div>
+<div><span class="badge"><svg class="ic" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#people"/></svg></span>Support until the decision</div>
+</div></div>
+
+<section id="about"><div class="wrap about">
+<div>
+<h2 class="t">Meet your Chartered Accountant</h2>
+<p>I am a practicing Chartered Accountant with 14 years of professional experience and an M.Com from Calcutta University. Over the years I have worked closely with business owners on accounts, taxation, audit and compliance, which gives me a clear view of what lenders look for in a loan proposal.</p>
+<p>Through TeamCASumanta, I focus on project financing. I help MSMEs, start-ups and growing businesses prepare accurate project reports and financial projections, and approach banks and schemes with confidence.</p>
+</div>
+<div class="facts">
+<div class="card"><b>14 years</b><span>of practice as a Chartered Accountant</span></div>
+<div class="card"><b>M.Com</b><span>Calcutta University</span></div>
+<div class="card"><b>Kolkata</b><span>Kestopur, West Bengal</span></div>
+</div>
+</div></section>
+
+<section id="services"><div class="wrap">
+<h2 class="t">Everything your loan proposal needs, in one place</h2>
+<p class="sub">We turn your business idea or existing numbers into documents a bank or NBFC can assess quickly.</p>
+<div class="grid">
+<div class="card svc"><span class="badge"><svg class="ic" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#doc"/></svg></span><h3>Project reports and DPRs</h3><p>Clear reports covering the business model, cost of project, means of finance and repayment capacity.</p></div>
+<div class="card svc"><span class="badge"><svg class="ic" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#chart"/></svg></span><h3>CMA data and projections</h3><p>Projected balance sheets, profit and loss, cash flow and ratios in the format lenders ask for.</p></div>
+<div class="card svc"><span class="badge"><svg class="ic" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#case"/></svg></span><h3>Term loans and working capital</h3><p>Proposals for machinery, expansion, cash credit and overdraft limits, matched to what your business can service.</p></div>
+<div class="card svc"><span class="badge"><svg class="ic" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#bank"/></svg></span><h3>Government schemes and subsidies</h3><p>Guidance on options such as PMEGP, Mudra, CGTMSE, Stand-Up India and Startup India, where you are eligible.</p></div>
+<div class="card svc"><span class="badge"><svg class="ic" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#redo"/></svg></span><h3>Renewal and enhancement</h3><p>Support for renewing or increasing existing limits with updated financials and a clear case for the change.</p></div>
+<div class="card svc"><span class="badge"><svg class="ic" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#people"/></svg></span><h3>Lender coordination</h3><p>Help with documentation, queries and follow-ups so your time stays on running the business.</p></div>
+</div>
+</div></section>
+
+<div class="band"><section id="process"><div class="wrap">
+<h2 class="t">How we work with you</h2>
+<ol class="steps">
+<li><h3>Understand</h3><p>We discuss your business, funding need and current financials.</p></li>
+<li><h3>Prepare</h3><p>We build the project report, projections and supporting documents.</p></li>
+<li><h3>Submit</h3><p>We help you choose the right lender or scheme and file a complete proposal.</p></li>
+<li><h3>Follow through</h3><p>We handle queries and clarifications until the lender’s decision.</p></li>
+</ol>
+</div></section></div>
+
+<section><div class="wrap">
+<h2 class="t">Who we help</h2>
+<ul class="chips"><li>Micro and small manufacturers</li><li>Traders and distributors</li><li>Service businesses</li><li>Start-ups</li><li>First-time entrepreneurs</li><li>Expanding family businesses</li></ul>
+</div></section>
+
+<div class="band"><section id="faq"><div class="wrap">
+<h2 class="t">Common questions</h2>
+<div style="margin-top:28px">
+<details><summary>What documents do I need to start?</summary><p>Usually your KYC, business proof, last two to three years’ financials and ITRs if you are already operating, and quotations for any machinery or assets you plan to buy. We confirm the exact list after a short discussion.</p></details>
+<details><summary>Can a new business with no track record get a loan?</summary><p>Yes, many schemes and lenders support new ventures. A strong project report with realistic projections and your own contribution makes the case easier to assess.</p></details>
+<details><summary>Do you guarantee loan approval?</summary><p>No. The lender decides on sanction, amount and terms. Our job is to present your proposal accurately and completely.</p></details>
+<details><summary>How long does the process take?</summary><p>Preparing the report typically takes a few days once documents are in hand. Sanction timelines depend on the lender and the scheme.</p></details>
+</div>
+</div></section></div>
+
+<section class="cb" id="callback"><div class="wrap cbg">
+<div>
+<h2 class="t">Request a call back</h2>
+<p class="sub">Tell us about your project and when to call. We will get back to you to discuss what is possible and what to prepare.</p>
+<ul class="ticks">
+<li><svg class="ic" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#check"/></svg>No obligation for the first discussion</li>
+<li><svg class="ic" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#clock"/></svg>You choose the time that suits you</li>
+<li><svg class="ic" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#shield"/></svg>Your details are used only to contact you</li>
+</ul>
+<div class="direct"><a class="btn alt sm" id="callbtn" href="tel:+919874196725">Call us</a><a class="btn alt sm" id="wabtn" href="https://wa.me/919874196725">WhatsApp</a><a class="btn alt sm" id="mailbtn" href="mailto:teamcasumanta@gmail.com">Email</a></div>
+<address>AC 178/A, Prafulla Kanan, Kestopur,<br>Kolkata, West Bengal 700101<br>Phone: <a href="tel:+919874196725">9874196725</a><br>Email: <a href="mailto:teamcasumanta@gmail.com">teamcasumanta@gmail.com</a></address>
+</div>
+<form class="card" id="cbf" novalidate>
+<div class="fg">
+<div><label for="nm">Your name</label><input id="nm" type="text" autocomplete="name" required></div>
+<div><label for="ph">Mobile number</label><input id="ph" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit number" required></div>
+<div><label for="bt">Type of business</label><select id="bt"><option>Manufacturing</option><option>Trading</option><option>Services</option><option>Start-up</option><option>Other</option></select></div>
+<div><label for="nd">Funding need</label><select id="nd"><option>Term loan</option><option>Working capital</option><option>Government scheme or subsidy</option><option>Not sure yet</option></select></div>
+<div><label for="tm">Preferred time</label><select id="tm"><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+<div><label for="am">Approx. amount needed</label><input id="am" type="text" placeholder="e.g. 25 lakh"></div>
+<div class="full"><label for="nt">Anything else we should know?</label><textarea id="nt"></textarea></div>
+</div>
+<p id="msg" role="status"></p>
+<button class="btn" type="submit" style="margin-top:6px;width:100%">Request call back</button>
+<p class="note" style="margin:12px 0 0">Submitting opens WhatsApp with your request ready to send.</p>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<a class="brand" href="#top"><i>CA</i>TeamCASumanta</a>
+<p>Project financing support for MSMEs, start-ups and growing businesses.</p><p>AC 178/A, Prafulla Kanan, Kestopur, Kolkata, West Bengal 700101 | 9874196725 | teamcasumanta@gmail.com</p>
+<p>The EMI estimator gives indicative figures only. Loan sanction, interest rates and terms are decided by the lending institution.</p>
+<p>© 2026 TeamCASumanta</p>
+</div></footer>
+
+<script>
+(function(){
+var WA="919874196725",MAIL="teamcasumanta@gmail.com",TEL="+919874196725";
+var $=function(i){return document.getElementById(i)};
+$("callbtn").href="tel:"+TEL;$("wabtn").href="https://wa.me/"+WA;$("mailbtn").href="mailto:"+MAIL;
+function inr(n){return "\u20B9"+Math.round(n).toLocaleString("en-IN")}
+function words(n){return n>=1e7?(n/1e7).toFixed(2).replace(/\.?0+$/,"")+" crore":(n/1e5)+" lakh"}
+function run(){
+var P=+$("amt").value,R=+$("rt").value,Y=+$("yr").value,r=R/1200,n=Y*12;
+var e=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1),tot=e*n;
+$("oa").textContent="\u20B9"+words(P);$("orr").textContent=R+"%";$("oy").textContent=Y+(Y>1?" years":" year");
+$("emi").textContent=inr(e);$("tp").textContent="Principal "+inr(P);$("ti").textContent="Interest "+inr(tot-P);
+$("pb").style.width=(P/tot*100)+"%";
+}
+["amt","rt","yr"].forEach(function(i){$(i).addEventListener("input",run)});
+run();
+$("cbf").addEventListener("submit",function(ev){
+ev.preventDefault();
+var m=$("msg"),name=$("nm").value.trim(),d=$("ph").value.replace(/\D/g,"").slice(-10);
+m.className="";
+if(!name||d.length!==10){m.className="err";m.textContent="Please enter your name and a valid 10-digit mobile number.";return}
+var t="Hello TeamCASumanta, please call me back.\nName: "+name+"\nMobile: "+d+"\nBusiness: "+$("bt").value+"\nFunding need: "+$("nd").value+"\nPreferred time: "+$("tm").value;
+if($("am").value.trim())t+="\nAmount: "+$("am").value.trim();
+if($("nt").value.trim())t+="\nNote: "+$("nt").value.trim();
+var u="https://wa.me/"+WA+"?text="+encodeURIComponent(t);
+m.innerHTML="Your request is ready. If WhatsApp did not open, <a href=\""+u+"\" target=\"_blank\" rel=\"noopener\">send it here</a>.";
+window.open(u,"_blank","noopener");
+});
+})();
+</script>
+</body>
+</html>
